@@ -1,2 +1,2 @@
-# goit-js-hw-03
-Java scrips Task-3. Massives and function
+# goit-js-hw-04
+Java scrips Task-4. Objects
