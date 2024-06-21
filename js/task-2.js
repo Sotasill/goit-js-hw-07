@@ -1,19 +1,4 @@
-function makeArray(firstArray, secondArray, maxLength){
-    const globalArray = firstArray.concat(secondArray);
-  
-  
-  if (globalArray.length > maxLength) {
-    
-    return globalArray.slice(0, maxLength);
-  }
-  
- 
-  return globalArray;
-}
-
-console.log(makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3)); 
-console.log(makeArray(["Mango", "Poly", "Houston"], ["Ajax", "Chelsea"], 4)); 
-console.log(makeArray(["Mango"], ["Ajax", "Chelsea", "Poly", "Houston"], 3)); 
-console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 2)); 
-console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 4)); 
-console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus", "Venus"], 0)); 
+// Напиши функцію calcAverageCalories(days), яка повертає середньодобове значення кількості калорій, 
+// які спортсмен споживав протягом тижня. Функція очікує один параметр: days — масив об’єктів. 
+// Кожен об’єкт описує день тижня та кількість калорій calories, спожитих спортсменом, у цей день. 
+// Візьми код нижче і встав після оголошення своєї функції для перевірки коректності її роботи. У консоль будуть виведені результати її викликів.

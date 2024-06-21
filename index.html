@@ -3,62 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Java Script HW-02</title>
+    <title>Java script HW-04</title>
+    
   </head>
-  <body
-    style="
-      background-color: bisque;
-      text-align: center;
-      padding-top: 200px;
-      margin: 0 auto;
-    "
-  >
-    <div
+  <body>
+    <form
       style="
-        background-color: green;
-        width: 500px;
-        margin: 0 auto;
-        background-color: gold; padding: 40px;
-        border-radius: 5px;
-        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-        background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png);
-        background-size: cover
-        ;
+        border: dashed 2px #d1d5db;
+        padding: 0.5rem 2rem;
+        font: 16px sans-serif;
       "
     >
-      <h1>Java script Homework 3</h1>
+      <h2>Java script HW-04</h2>
+      <div class="internal" style="display: flex; gap: 2rem">
+        <img
+          width="164"
+          src="https://api.qrserver.com/v1/create-qr-code/?size=164x164&data=todo"
+          alt=""
+        />
+        <div
+          class="inputs"
+          style="
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+          "
+        >
+          <label style="display: flex; flex-direction: column">
+            Network name
+            <input class="ssid" placeholder="WiFi Network name" style="color: #374151;
+            font-family: monospace;
+            height: 38px;
+            padding: 0 16px;
+            border: 1px solid #d1d1d1;" />
+          </label>
+          <label style="display: flex; flex-direction: column">
+            Password
+            <input class="Password" placeholder="Password" style="color: #374151;
+            font-family: monospace;
+            height: 38px;
+            padding: 0 16px;
+            border: 1px solid #d1d1d1;"/>
+          </label>
+        </div>
+      </div>
+      <p>Point your phone camera at QR code to connect Network</p>
 
-      <form>
-        <label for="input">
-          <input
-            type="text"
-            id="input"
-            name="input"
-            placeholder="Enter to the world of Javascript"
-            style="
-              border-radius: 4px;
-              border-color: blueviolet;
-              margin-bottom: 20px;
-              width: 200px;
-            "
-          />
-        </label>
-      </form>
-      <button
-        type="button"
-        style="
-          width: 200px;
-          border-radius: 4px;
-          background-color: blue;
-          color: azure;
-        "
-      >
-        Enter
-      </button>
-    </div>
+      <button type="button" style="height: 2.5rem;
+      background-color: #0ea5e9;
+      color: #fff;
+      border-radius: 0.25rem;
+      border: none;
+      font-size: 1rem;">Print WiFi card</button>
+    </form>
 
-    <script type="module" src="./js/task-1.js"></script>
-    <script type="module" src="./js/task-2.js"></script>
-    <script type="module" src="./js/task-3.js"></script>
+   <script src="./js/task-1.js" type="module"></script>
+   <script src="./js/task-2.js" type="module"></script>
+   <script src="./js/task-3.js" type="module"></script>
   </body>
 </html>
