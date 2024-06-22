@@ -50,13 +50,46 @@
         </div>
       </div>
       <p>Point your phone camera at QR code to connect Network</p>
+      
+      
 
       <button type="button" style="height: 2.5rem;
       background-color: #0ea5e9;
       color: #fff;
       border-radius: 0.25rem;
       border: none;
-      font-size: 1rem;">Print WiFi card</button>
+      font-size: 1rem;
+      margin-bottom: 30px;
+      ">Print WiFi card</button>
+
+<style>
+  
+  .loader {
+    width: fit-content;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 30px;
+    padding-bottom: 8px;
+    background: linear-gradient(currentColor 0 0) 0 100%/0% 3px no-repeat;
+    animation: loader-animation 2s linear infinite;
+    position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+
+  .loader:before {
+    content: "Loading...";
+  }
+
+  @keyframes loader-animation {
+    to {
+      background-size: 100% 3px;
+    }
+  }
+</style>
+
+<div class="loader"></div>
     </form>
 
    <script src="./js/task-1.js" type="module"></script>
@@ -64,3 +97,5 @@
    <script src="./js/task-3.js" type="module"></script>
   </body>
 </html>
+
+
