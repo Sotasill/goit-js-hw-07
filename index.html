@@ -1,101 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Java script HW-04</title>
-    
-  </head>
-  <body>
-    <form
-      style="
-        border: dashed 2px #d1d5db;
-        padding: 0.5rem 2rem;
-        font: 16px sans-serif;
-      "
-    >
-      <h2>Java script HW-04</h2>
-      <div class="internal" style="display: flex; gap: 2rem">
-        <img
-          width="164"
-          src="https://api.qrserver.com/v1/create-qr-code/?size=164x164&data=todo"
-          alt=""
-        />
-        <div
-          class="inputs"
-          style="
-            width: 100%;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Homework-05</title>
+    <style>
+        body {
+            font-family: Helvetica, sans-serif;
+            background-color: #080808;
+            margin: 0;
+            padding: 20px;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 1rem;
-          "
-        >
-          <label style="display: flex; flex-direction: column">
-            Network name
-            <input class="ssid" placeholder="WiFi Network name" style="color: #374151;
-            font-family: monospace;
-            height: 38px;
-            padding: 0 16px;
-            border: 1px solid #d1d1d1;" />
-          </label>
-          <label style="display: flex; flex-direction: column">
-            Password
-            <input class="Password" placeholder="Password" style="color: #374151;
-            font-family: monospace;
-            height: 38px;
-            padding: 0 16px;
-            border: 1px solid #d1d1d1;"/>
-          </label>
-        </div>
-      </div>
-      <p>Point your phone camera at QR code to connect Network</p>
-      
-      
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+        }
+        .container {
+            background-color: #0a0101;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .output {
+            margin-top: 20px;
+        }
+        .output div {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #e0e0e0;
+            border-radius: 4px;
+        }
+        h1 {
+            text-align: center;
+            color: azure;
+        }
+        button {
+            margin-top: 40px;
+            background-color: red;
+            color: aliceblue;
+            font-size: 20px;
+            padding: 20px 40px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: green; 
+        }
+        .popup {
+            width: 20%;
+            height: 20%;
+            position: absolute;
+            background-color: green;
+            color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            display: none;
+            cursor: pointer;
+            text-align: center;
+            font-size: 20px;
+            padding: 100px 20px 20px 20px
+        }
+        .popup:hover {
+            background-color: red;
+            color: black;
+            size: -50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Console Outputs</h1>
+        <div class="output" id="output"></div>
 
-      <button type="button" style="height: 2.5rem;
-      background-color: #0ea5e9;
-      color: #fff;
-      border-radius: 0.25rem;
-      border: none;
-      font-size: 1rem;
-      margin-bottom: 30px;
-      ">Print WiFi card</button>
+        <button id="showPopupBtn">Press to Confirm Homework</button>
+        <div id="popup" class="popup">Thank you. Press to close this window</div>
+    </div>
 
-<style>
-  
-  .loader {
-    width: fit-content;
-    font-weight: bold;
-    font-family: sans-serif;
-    font-size: 30px;
-    padding-bottom: 8px;
-    background: linear-gradient(currentColor 0 0) 0 100%/0% 3px no-repeat;
-    animation: loader-animation 2s linear infinite;
-    position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-  }
+    <script>
+        const popup = document.getElementById('popup');
+        
+        document.getElementById('showPopupBtn').addEventListener('click', function(event) {
+            event.stopPropagation();
+            popup.style.display = 'block';
+            popup.style.top = `${Math.random() * (window.innerHeight - popup.offsetHeight)}px`;
+            popup.style.left = `${Math.random() * (window.innerWidth - popup.offsetWidth)}px`;
+        });
 
-  .loader:before {
-    content: "Loading...";
-  }
+        document.getElementById('popup').addEventListener('mouseover', function() {
+            popup.style.top = `${Math.random() * (window.innerHeight - popup.offsetHeight)}px`;
+            popup.style.left = `${Math.random() * (window.innerWidth - popup.offsetWidth)}px`;
+        });
 
-  @keyframes loader-animation {
-    to {
-      background-size: 100% 3px;
-    }
-  }
-</style>
+        document.addEventListener('click', function() {
+            popup.style.display = 'none';
+        });
 
-<div class="loader"></div>
-    </form>
+        popup.addEventListener('click', function(event) {
+            event.stopPropagation();
+        });
+    </script>
 
-   <script src="./js/task-1.js" type="module"></script>
-   <script src="./js/task-2.js" type="module"></script>
-   <script src="./js/task-3.js" type="module"></script>
-  </body>
+    <script>
+        function logToPage(message) {
+            const outputDiv = document.getElementById('output');
+            const messageDiv = document.createElement('div');
+            messageDiv.textContent = message;
+            outputDiv.appendChild(messageDiv);
+        }
+
+        
+        const originalConsoleLog = console.log;
+
+        console.log = function(message) {
+            originalConsoleLog(message); 
+            logToPage(message);          
+        };
+    </script>
+
+    <script type="module" src="./js/task-1.js"></script>
+    <script type="module" src="./js/task-2.js"></script>
+    <script type="module" src="./js/task-3.js"></script>
+    <script type="module" src="./js/task-4.js"></script>
+</body>
 </html>
-
-
