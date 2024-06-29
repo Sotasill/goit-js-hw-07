@@ -1,2 +1,2 @@
-# goit-js-hw-04
-Java scrips Task-4. Objects
+# goit-js-hw-05
+Java scrips Task-5. Methods
