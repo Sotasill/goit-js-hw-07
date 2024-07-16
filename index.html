@@ -1,127 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript Homework-06</title>
-    <style>
-        body {
-            font-family: Helvetica, sans-serif;
-            background-color: #080808;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center; 
-            align-items: center; 
-            height: 100vh; 
-        }
-        .container {
-            background-color: #0a0101;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        .output {
-            margin-top: 20px;
-        }
-        .output div {
-            margin-bottom: 10px;
-            padding: 10px;
-            background-color: #e0e0e0;
-            border-radius: 4px;
-        }
-        h1 {
-            text-align: center;
-            color: azure;
-        }
-        button {
-            margin-top: 40px;
-            background-color: red;
-            color: aliceblue;
-            font-size: 20px;
-            padding: 20px 40px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: green; 
-        }
-        .popup {
-            width: 20%;
-            height: 20%;
-            position: absolute;
-            background-color: green;
-            color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            display: none;
-            cursor: pointer;
-            text-align: center;
-            font-size: 20px;
-            padding: 100px 20px 20px 20px
-        }
-        .popup:hover {
-            background-color: red;
-            color: black;
-            size: -50%;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Console Outputs</h1>
-        <div class="output" id="output"></div>
-
-        <button id="showPopupBtn">Press to Confirm Homework</button>
-        <div id="popup" class="popup">Thank you. Press to close this window</div>
-    </div>
-
-    <script>
-        const popup = document.getElementById('popup');
-        
-        document.getElementById('showPopupBtn').addEventListener('click', function(event) {
-            event.stopPropagation();
-            popup.style.display = 'block';
-            popup.style.top = `${Math.random() * (window.innerHeight - popup.offsetHeight)}px`;
-            popup.style.left = `${Math.random() * (window.innerWidth - popup.offsetWidth)}px`;
-        });
-
-        document.getElementById('popup').addEventListener('mouseover', function() {
-            popup.style.top = `${Math.random() * (window.innerHeight - popup.offsetHeight)}px`;
-            popup.style.left = `${Math.random() * (window.innerWidth - popup.offsetWidth)}px`;
-        });
-
-        document.addEventListener('click', function() {
-            popup.style.display = 'none';
-        });
-
-        popup.addEventListener('click', function(event) {
-            event.stopPropagation();
-        });
-    </script>
-
-    <script>
-        function logToPage(message) {
-            const outputDiv = document.getElementById('output');
-            const messageDiv = document.createElement('div');
-            messageDiv.textContent = message;
-            outputDiv.appendChild(messageDiv);
-        }
-
-        
-        const originalConsoleLog = console.log;
-
-        console.log = function(message) {
-            originalConsoleLog(message); 
-            logToPage(message);          
-        };
-    </script>
-
-    <script type="module" src="./js/task-1.js"></script>
-    <script type="module" src="./js/task-2.js"></script>
-    <script type="module" src="./js/task-3.js"></script>
-    <!-- <script type="module" src="./js/task-4.js"></script> -->
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework 7</title>
+    <link rel="stylesheet" href="./css/common.css" />
+  </head>
+  <body>
+    <ul>
+      <li><a href="./task-1.html">Task 1</a></li>
+      <li><a href="./task-2.html">Task 2</a></li>
+      <li><a href="./task-3.html">Task 3</a></li>
+      <li><a href="./task-4.html">Task 4</a></li>
+      <li><a href="./task-5.html">Task 5</a></li>
+      <li><a href="./task-6.html">Task 6</a></li>
+    </ul>
+  </body>
 </html>

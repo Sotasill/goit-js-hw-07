@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 6</title>
+    <link rel="stylesheet" href="./css/common.css" />
+  </head>
+  <body>
+    <p><a href="./index.html">Go back</a></p>
+
+    <div id="controls">
+      <input
+        type="number"
+        min="1"
+        max="100"
+        step="1"
+        id="number-input"
+        value="1"
+      />
+      <button type="button" data-create>Create</button>
+      <button type="button" data-destroy>Destroy</button>
+    </div>
+
+    <div id="boxes"></div>
+
+    <style>
+      body {
+        padding: 100px 156px;
+      }
+
+      #controls {
+        background: #f6f6fe;
+        border-radius: 8px;
+        padding: 32px;
+        width: 486px;
+        height: 104px;
+        display: flex;
+        gap: 16px;
+        margin-bottom: 32px;
+      }
+
+      input {
+        border: 1px solid #808080;
+        border-radius: 8px;
+        padding: 8px;
+        width: 150px;
+        height: 40px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.04em;
+        color: #2e2f42;
+        text-align: center;
+        background: transparent;
+      }
+
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      #controls button {
+        border-radius: 8px;
+        padding: 8px 16px;
+        width: 120px;
+        height: 40px;
+        background: #4e75ff;
+        color: #fff;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.04em;
+        margin-bottom: 32px; 
+  justify-content: center; 
+  align-items: center; 
+      }
+
+      #controls button:nth-of-type(2) {
+        background: #ff4e4e;
+      }
+
+      #boxes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 48px 24px;
+        background: #f6f6fe;
+        border-radius: 8px;
+        padding: 32px;
+        width: 486px;
+        height: 134px;
+        display: flex;
+  flex-wrap: wrap;
+  gap: 48px 24px;
+  justify-content: center; 
+      }
+    </style>
+
+    <script src="./js/task-6.js" type="module"></script>
+  </body>
+</html>
