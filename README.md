@@ -1,2 +1,2 @@
-# goit-js-hw-05
-Java scrips Task-6. OOP, classes
+# goit-js-hw-07
+Java scrips Task-7. DOM
